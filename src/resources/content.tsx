@@ -2,21 +2,21 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Penny",
+  lastName: "Makesit",
+  name: `Penny Makesit`,
+  role: "Artist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "penny@pennymakesit.com",
+  location: "Australia/Sydney", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
   locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about creativity</>,
 };
 
 const social: Social = [
@@ -61,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Creating beautiful art work, one piece at a time.</>,
   featured: {
     display: true,
     title: (
@@ -79,9 +79,9 @@ const home: Home = {
     <>
       I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
       <Text as="span" size="xl" weight="strong">
-        ONCE UI
+        PennyMakesit
       </Text>
-      , where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      , where I create beautiful art work. 
     </>
   ),
 };
@@ -108,14 +108,13 @@ const about: About = {
     description: (
       <>
         {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based{" "}
-        {person.role.toLowerCase()} with a passion for transforming complex challenges into simple,
-        elegant design solutions. Their work spans digital interfaces, interactive experiences, and
-        the convergence of design and technology.
+        {person.role.toLowerCase()} with a passion for creating beautiful art work. With a keen eye for detail and a commitment to excellence, 
+        {person.firstName} brings ideas to life through innovative design and artistic expression.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -165,13 +164,9 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "Iris Art Studio",
+        description: <>Studied fine arts, focusing on painting and drawing.</>,
+      }
     ],
   },
   technical: {
@@ -179,55 +174,22 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Acrylic Painting",
+        description: <>Painting with acrylics, focusing on landscapes and portraits.</>,
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Watercolor Painting",
+        description: <>Creating beautiful watercolor paintings, focusing on nature and still life.</>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          
         ],
       },
     ],
@@ -237,7 +199,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about art, creativity, and life...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -247,7 +209,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Design and art projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
