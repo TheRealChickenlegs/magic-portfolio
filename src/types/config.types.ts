@@ -10,7 +10,6 @@ import {
   TransitionStyle,
 } from "@once-ui-system/core";
 import type { ChartMode, ChartVariant } from "@once-ui-system/core/data";
-import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 
 /**
  * Display configuration for UI elements.
@@ -35,10 +34,10 @@ export type ProtectedRoutesConfig = Record<`/${string}`, boolean>;
  * Font configuration for each variant.
  */
 export type FontsConfig = {
-  heading: NextFontWithVariable;
-  body: NextFontWithVariable;
-  label: NextFontWithVariable;
-  code: NextFontWithVariable;
+  heading: { variable: string };
+  body: { variable: string };
+  label: { variable: string };
+  code: { variable: string };
 };
 
 /**

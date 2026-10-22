@@ -5,6 +5,9 @@
     "dev": "next dev",
     "export": "next export",
     "build": "next build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "biome-write": "npx @biomejs/biome format --write .",
     "start": "next start",
     "lint": "next lint"
@@ -37,7 +40,9 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.25.0",
     "typescript": "^5.8.3",
-    "tzdata": "^1.0.44"
+    "tzdata": "^1.0.44",
+    "@opennextjs/cloudflare": "latest",
+    "wrangler": "latest"
   },
   "engines": {
     "node": ">=20.9.0"
