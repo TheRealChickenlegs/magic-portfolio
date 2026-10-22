@@ -100,12 +100,18 @@ This project uses OpenNext to build the Next.js app for Cloudflare Workers.
 
 ```bash
 npm install
+npm run build:cloudflare
 npm run preview
 npm run deploy
 ```
 
 Authenticate Wrangler first with `npx wrangler login`. Set the Worker name in
 `wrangler.jsonc` if `magic-portfolio` is already taken in your Cloudflare account.
+
+For a Cloudflare Workers Git deployment, use `npm run build:cloudflare` as the
+build command and `npx wrangler deploy` as the deploy command. Do not use
+`npm run build` as the Cloudflare build command; that only creates the Next.js
+output and does not create the `.open-next` Worker bundle.
 
 ## Deploy with Vercel
 
