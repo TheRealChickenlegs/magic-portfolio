@@ -108,10 +108,9 @@ npm run deploy
 Authenticate Wrangler first with `npx wrangler login`. Set the Worker name in
 `wrangler.jsonc` if `magic-portfolio` is already taken in your Cloudflare account.
 
-For a Cloudflare Workers Git deployment, use `npm run build:cloudflare` as the
-build command and `npx wrangler deploy` as the deploy command. Do not use
-`npm run build` as the Cloudflare build command; that only creates the Next.js
-output and does not create the `.open-next` Worker bundle.
+For a Cloudflare Workers Git deployment, use `npm run build` as the build
+command and `npx wrangler deploy` as the deploy command. `npm run build` now
+creates both the Next.js output and the `.open-next` Worker bundle.
 
 ## Deploy with Vercel
 
