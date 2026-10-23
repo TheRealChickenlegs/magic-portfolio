@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { contentData, type ContentPost } from "@/resources/content-data";
 
 type Team = {
   name: string;
@@ -68,7 +69,12 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getPosts(customPath = ["", "", "", ""]) {
+export function getPosts(customPath = ["", "", "", ""]): ContentPost[] {
+  const bundledPosts = contentData[customPath.join("/")];
+  if (bundledPosts) {
+    return bundledPosts;
+  }
+
   // Posts are read at build time. The ignore comment keeps Next from tracing
   // the whole project (images and video included) into every server function.
   const postsDir = path.join(/* turbopackIgnore: true */ process.cwd(), ...customPath);

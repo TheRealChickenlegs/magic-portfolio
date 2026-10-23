@@ -2,5 +2,5 @@ import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
 export default {
 	...defineCloudflareConfig(),
-	buildCommand: "next build",
+	buildCommand: "node scripts/generate-content-data.mjs && next build",
 };
